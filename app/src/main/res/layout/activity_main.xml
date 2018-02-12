@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.taras.gascalculation.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/methane_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:text="@string/gas_methane"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/editMethane_ID"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:inputType="numberDecimal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/methane_ID" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relativeLayout2"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/monoxideCarbon_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="@string/gas_carbon_monoxide"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/editMonoxide_ID"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:inputType="numberDecimal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/monoxideCarbon_ID" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relativeLayout3"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/hydrogen_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:text="@string/gas_hydrogen"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/editHydrogen_ID"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:inputType="numberDecimal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/hydrogen_ID" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relativeLayout4"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/relativeLayout3"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/dioxideCarbon_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:text="@string/gas_carbon_dioxide"
+            android:layout_alignBaseline="@+id/editDioxide_ID"
+            android:layout_alignBottom="@+id/editDioxide_ID"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/editDioxide_ID"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:inputType="numberDecimal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/dioxideCarbon_ID" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relativeLayout5"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/relativeLayout4"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/nitrogen_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="@string/gas_nitrogen"
+            android:textSize="20sp"
+            android:layout_alignBaseline="@+id/editNitrogen_ID"
+            android:layout_alignBottom="@+id/editNitrogen_ID"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/editNitrogen_ID"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:inputType="numberDecimal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/nitrogen_ID" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/relativeLayout6"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/relativeLayout5"
+        android:layout_alignParentStart="true">
+        <Button
+            android:id="@+id/btn_getResult"
+            android:text="@string/btn_result"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="36dp" />
+
+        <Button
+            android:id="@+id/btn_Check"
+            android:text="@string/btn_check"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btn_About"
+            android:text="@string/btn_about"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="36dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

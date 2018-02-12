@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:id="@+id/gas_calorific_ID" />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/gas_calorific_ID"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/gas_density_ID" />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:id="@+id/gas_tcoAir_ID"
+        android:layout_below="@+id/gas_density_ID"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/gas_tcoAir_ID"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/gas_normalRate_ID" />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/gas_normalRate_ID"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/gas_lowerFL_ID" />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/gas_lowerFL_ID"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/gas_higherFT_ID" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="40dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:text="@string/btn_back"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp" />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:text="@string/btn_add"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="34dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

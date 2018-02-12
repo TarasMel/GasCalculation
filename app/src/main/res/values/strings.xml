@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">GasCalculation</string>
+    <string name="gas_methane">Methane</string>
+    <string name="gas_hydrogen">Hydrogen</string>
+    <string name="gas_carbon_monoxide">Carbon Monoxide</string>
+    <string name="gas_carbon_dioxide">Carbon Dioxide</string>
+    <string name="gas_nitrogen">Nitrogen</string>
+    <string name="btn_about">About</string>
+    <string name="btn_check">Check</string>
+    <string name="btn_result">Result</string>
+    
+    <string name="for_btn_about">Bla bla bla bla</string>
+
+    <!--String for Result Activity-->
+
+    <string name="gas_calorific">Gas Calorific</string>
+    <string name="gas_density">Gas Density</string>
+    <string name="theoretical_consumption_of_air">Theoretical consumption of air</string>
+    <string name="normal_rate">Normal rate of flame</string>
+    <string name="lower_flammable_limit">Lower flammable limit</string>
+    <string name="higher_flammable_limit">Higher flammable limit</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_back">Back</string>
+</resources>
