@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends BaseActivity{
 
     EditText editMethane;
     EditText editMonoxide;
@@ -83,8 +83,4 @@ public class MainActivity extends AppCompatActivity{
         });
     }
 
-
-    private void toastMessage (String text){
-        Toast.makeText(this, text, Toast.LENGTH_LONG).show();
-    }
 }
