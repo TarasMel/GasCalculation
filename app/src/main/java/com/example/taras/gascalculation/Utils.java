@@ -10,7 +10,7 @@ public class Utils {
     //TODO probably need to delete private method's, and stay them in static
     //private GasDescription gasDescription;
     // ArrayList<String> list = new ArrayList<>();
-/*
+
     // gas calorific value
     private static double gasCalorificValue (GasDescription gasDescription){
         double gasCalorificValue;
@@ -142,8 +142,8 @@ public class Utils {
         else return true;
     }
 
-    //TODO Перевірити дану хуйню в Інтелідж Ідеї
-    //Перевод стринго в объект классаа
+
+    //Перевод в объекта Эррей лист
     private static  ArrayList<String> gasDescriptionToString (GasDescription gasDescription){
         ArrayList<String> list = new ArrayList<>();
         list.add(Double.toString(gasDescription.getGasCH4()));
@@ -153,7 +153,7 @@ public class Utils {
         list.add(Double.toString(gasDescription.getGasN2()));
         return list;
     }
-    public static ArrayList<String> getGasDescriptionToString (GasDescription gasDescription){
+    public static ArrayList<String> getGasDescriptionToString (GasDescription gasDescription) {
         return gasDescriptionToString(gasDescription);
-    }*/
+    }
 }

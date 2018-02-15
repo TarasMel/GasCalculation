@@ -9,7 +9,7 @@
     <string name="btn_check">Check</string>
     <string name="btn_result">Result</string>
     
-    <string name="for_btn_about">Bla bla bla bla</string>
+    <string name="for_btn_about">Taking text from string values</string>
 
     <!--String for Result Activity-->
 

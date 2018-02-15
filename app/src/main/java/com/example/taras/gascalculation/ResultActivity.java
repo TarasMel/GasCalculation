@@ -55,7 +55,7 @@ public class ResultActivity extends AppCompatActivity {
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toastMessage("FUCK!!!!!");
+                toastMessage("Adding to Database");
             }
         });
 
