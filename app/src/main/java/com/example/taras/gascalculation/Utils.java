@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 
 public class Utils {
-    //TODO probably need to delete private method's, and stay them in static
+    //TODO Check that all method works correctly, and maybe some of them we don't need to use
     //private GasDescription gasDescription;
     // ArrayList<String> list = new ArrayList<>();
 
