@@ -8,7 +8,7 @@
     <string name="btn_about">About</string>
     <string name="btn_check">Check</string>
     <string name="btn_result">Result</string>
-    
+
     <string name="for_btn_about">Taking text from string values</string>
 
     <!--String for Result Activity-->
@@ -21,4 +21,8 @@
     <string name="higher_flammable_limit">Higher flammable limit</string>
     <string name="btn_add">Add</string>
     <string name="btn_back">Back</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="launcher_fragment">launcher</string>
+    <string name="result_fragment">result</string>
 </resources>

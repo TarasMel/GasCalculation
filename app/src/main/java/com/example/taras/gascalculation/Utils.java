@@ -2,12 +2,10 @@ package com.example.taras.gascalculation;
 
 import java.util.ArrayList;
 
-/**
- * Created by Taras on 06.02.2018.
- */
+
 
 public class Utils {
-    //TODO probably need to delete private method's, and stay them in static
+    //TODO Check that all method works correctly, and maybe some of them we don't need to use
     //private GasDescription gasDescription;
     // ArrayList<String> list = new ArrayList<>();
 

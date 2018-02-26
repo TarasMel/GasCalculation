@@ -1,19 +1,57 @@
 package com.example.taras.gascalculation;
 
-import android.content.Intent;
-import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
+
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 
-import java.util.ArrayList;
+public class MainActivity extends BaseActivity implements
+        LauncherFragment.OnFragmentInteractionListener,
+        ResultFragment.OnFragmentInteractionListener{
 
-public class MainActivity extends BaseActivity{
+    private TabLayout tabLayout;
 
-    EditText editMethane;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout_ID);
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        final ViewPager viewPager = (ViewPager)findViewById(R.id.pager_ID);
+        final PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(),
+                tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
+        viewPager.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+    }
+}
+
+
+ /*EditText editMethane;
     EditText editMonoxide;
     EditText editHydrogen;
     EditText editDioxide;
@@ -22,17 +60,9 @@ public class MainActivity extends BaseActivity{
     Button btn_Check;
     Button btn_about;
 
-    ArrayList<String> listEntry;
-//    GasDescription gasDescription;
+    ArrayList<String> listEntry;*/
 
-//TODO в реализацию проверки чтобы общая сумма была ровно сто перевести все методи в классе Утилс в ГасДскриптион
-//TODO Приложение валится при нажатии на кнопке результат
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        editMethane = (EditText) findViewById(R.id.editMethane_ID);
+         /*editMethane = (EditText) findViewById(R.id.editMethane_ID);
         editMonoxide = (EditText) findViewById(R.id.editMonoxide_ID);
         editHydrogen = (EditText) findViewById(R.id.editHydrogen_ID);
         editDioxide = (EditText) findViewById(R.id.editDioxide_ID);
@@ -48,12 +78,7 @@ public class MainActivity extends BaseActivity{
         listEntry.add(editHydrogen.toString());
         listEntry.add(editDioxide.toString());
         listEntry.add(editNitrogen.toString());
-        //Creating obj gasDescription
-/*        gasDescription = new GasDescription(Utils.getGasDescriptions(editMethane.toString()),
-                Utils.getGasDescriptions(editMonoxide.toString()),
-                Utils.getGasDescriptions(editHydrogen.toString()),
-                Utils.getGasDescriptions(editDioxide.toString()),
-                Utils.getGasDescriptions(editNitrogen.toString()));*/
+
 
 
         btn_about.setOnClickListener(new View.OnClickListener() {
@@ -66,21 +91,8 @@ public class MainActivity extends BaseActivity{
         btn_Check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /*if(gasDescription.checkingAdding(gasDescription))
-                toastMessage("All good!!!You can get your result");
-                else toastMessage("Incorrect entry of data, check your options," +
-                        " because their amount should be 100 ");*/
+                //checking logic
                 toastMessage("Lalalalalalalala");
             }
         });
-        btn_getResult.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ResultActivity.class);
-                //intent.putExtra("gas_all", listEntry);
-                startActivity(intent);
-            }
-        });
-    }
-
-}
+        });*/
