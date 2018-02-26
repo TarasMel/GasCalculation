@@ -10,7 +10,7 @@ public class MainActivity extends BaseActivity implements
         LauncherFragment.OnFragmentInteractionListener,
         ResultFragment.OnFragmentInteractionListener{
 
-    TabLayout tabLayout;
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,6 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     public void onFragmentInteraction(Uri uri) {
-
     }
 }
 

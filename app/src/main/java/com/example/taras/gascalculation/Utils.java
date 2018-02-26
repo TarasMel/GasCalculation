@@ -2,9 +2,7 @@ package com.example.taras.gascalculation;
 
 import java.util.ArrayList;
 
-/**
- * Created by Taras on 06.02.2018.
- */
+
 
 public class Utils {
     //TODO Check that all method works correctly, and maybe some of them we don't need to use
