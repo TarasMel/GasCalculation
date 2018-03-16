@@ -1,4 +1,5 @@
-package com.example.taras.gascalculation;
+package com.example.taras.gascalculation.AppLogic;
+
 
 import java.util.ArrayList;
 
@@ -12,9 +13,9 @@ public class Utils {
     // gas calorific value
     private static double gasCalorificValue (GasDescription gasDescription){
         double gasCalorificValue;
-        double a=100, b = 100, c = 100; //the values from the database for calorific value
-        gasCalorificValue = ((gasDescription.getGasCO()/100)*a+(gasDescription.getGasCH4()/100)*b+
-                (gasDescription.getGasH2()/100)*c);
+        gasCalorificValue = ((gasDescription.getGasCO()/100)* Constants.CO_GAS_CALORIFIC_VALUE+
+                (gasDescription.getGasCH4()/100)*Constants.CH4_GAS_CALORIFIC_VALUE+
+                (gasDescription.getGasH2()/100)*Constants.H2_GAS_CALORIFIC_VALUE);
         return gasCalorificValue;
     }
 
@@ -24,10 +25,9 @@ public class Utils {
     // gas density
     private static double gasDensity (GasDescription gasDescription) {
         double gasDensity;
-        double a = 0, b = 0, c = 0, d = 0, e = 0; //the values from the database for density value
-        gasDensity = ((gasDescription.getGasCO()/100)*a+(gasDescription.getGasCH4()/100)*b+
-                (gasDescription.getGasH2()/100)*c + (gasDescription.getGasCO2()/100)*d+
-                (gasDescription.getGasN2()/100)*e);
+        gasDensity = ((gasDescription.getGasCO()/100)*Constants.CO_GAS_DENSITY+(gasDescription.getGasCH4()/100)*Constants.CH4_GAS_DENSITY+
+                (gasDescription.getGasH2()/100)*Constants.H2_GAS_DENSITY + (gasDescription.getGasCO2()/100)*Constants.CO2_GAS_DENSITY+
+                (gasDescription.getGasN2()/100)*Constants.N2_GAS_DENSITY);
         return gasDensity;
     }
 
@@ -38,9 +38,10 @@ public class Utils {
     // theoretical consumption of air when the excess air ratio equal to one
     private static double gasTheoreticalAirConsumption (GasDescription gasDescription){
         double gasTheoreticalAirConsumption;
-        double a = 0, b = 0; //the values from the database for density value
-        gasTheoreticalAirConsumption = (1/21)*(a*(gasDescription.getGasCO()+
-                gasDescription.getGasH2())+b*gasDescription.getGasCH4());
+        gasTheoreticalAirConsumption = (1/21)*(Constants.CO_AND_H2_GAS_THEORETICAL_AIR_CONSUMPTION*
+                (gasDescription.getGasCO()+
+                gasDescription.getGasH2())+Constants.CH4_GAS_THEORETICAL_AIR_CONSUMPTION*
+                gasDescription.getGasCH4());
         return gasTheoreticalAirConsumption;
     }
 
@@ -51,10 +52,9 @@ public class Utils {
     // the normal rate of flame propagation
     private static double gasNormalRate (GasDescription gasDescription){
         double gasNormalRate;
-        double a = 0, b = 0, c = 0, d = 0, e = 0; //the values from the database for density value
-
-        gasNormalRate = ((gasDescription.getGasCO()*a+gasDescription.getGasCH4()*b+
-                gasDescription.getGasH2()*c+gasDescription.getGasCO2()*d+gasDescription.getGasN2()*e)
+        gasNormalRate = ((gasDescription.getGasCO()*Constants.CO_GAS_NORMAL_RATE+
+                gasDescription.getGasCH4()*Constants.CH4_GAS_NORMAL_RATE+
+                gasDescription.getGasH2()*Constants.H2_GAS_NORMAL_RATE)
                 /(gasDescription.getGasCO()+gasDescription.getGasCH4()+
                 gasDescription.getGasH2()+gasDescription.getGasCO2()+gasDescription.getGasN2()));
         if(gasDescription.getGasBallast(gasDescription)) return gasNormalRate;
@@ -73,13 +73,11 @@ public class Utils {
     // lower flammable limit
     private static double gasLowerFL (GasDescription gasDescription){
         double gasLowerFT;
-        double a = 0, b = 0, c = 0, d = 0, e = 0; //the values from the database for density value
-
         gasLowerFT = ((gasDescription.getGasCO()+gasDescription.getGasCH4()+
                 gasDescription.getGasH2()+gasDescription.getGasCO2()+gasDescription.getGasN2())
-                /(gasDescription.getGasCO()/a+gasDescription.getGasCH4()/b+
-                gasDescription.getGasH2()/c));
-
+                /(gasDescription.getGasCO()/Constants.CO_GAS_LOWER_FLAMMABLE_LIMIT+
+                gasDescription.getGasCH4()/Constants.CH4_GAS_LOWER_FLAMMABLE_LIMIT+
+                gasDescription.getGasH2()/Constants.H2_GAS_LOWER_FLAMMABLE_LIMIT));
         if(gasDescription.getGasBallast(gasDescription)) return gasLowerFT;
         else{
             double gasLFT;
@@ -98,13 +96,11 @@ public class Utils {
     // higher flammable limit
     private static double gasHigherFL (GasDescription gasDescription){
         double gasHigherFL;
-        double a = 0, b = 0, c = 0, d = 0, e = 0; //the values from the database for density value
-
         gasHigherFL = ((gasDescription.getGasCO()+gasDescription.getGasCH4()+
                 gasDescription.getGasH2()+gasDescription.getGasCO2()+gasDescription.getGasN2())
-                /(gasDescription.getGasCO()/a+gasDescription.getGasCH4()/b+
-                gasDescription.getGasH2()/c));
-
+                /(gasDescription.getGasCO()/Constants.CO_GAS_HIGHER_FLAMMABLE_LIMIT+
+                gasDescription.getGasCH4()/Constants.CH4_GAS_HIGHER_FLAMMABLE_LIMIT+
+                gasDescription.getGasH2()/Constants.H2_GAS_HIGHER_FLAMMABLE_LIMIT));
         if(gasDescription.getGasBallast(gasDescription)) return gasHigherFL;
         else{
             double gasHFT;
@@ -119,7 +115,8 @@ public class Utils {
     public static double getGasHigherFL (GasDescription gasDescription){
         return gasHigherFL(gasDescription);
     }
-    //TODO
+
+
     private static  double listToGasDescription (String list){
         double gasComp;
         gasComp = Double.parseDouble(list);

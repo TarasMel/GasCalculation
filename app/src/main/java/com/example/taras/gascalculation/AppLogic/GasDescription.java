@@ -1,4 +1,4 @@
-package com.example.taras.gascalculation;
+package com.example.taras.gascalculation.AppLogic;
 
 /**
  * Created by Taras on 06.02.2018.

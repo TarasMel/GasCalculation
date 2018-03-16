@@ -1,4 +1,4 @@
-package com.example.taras.gascalculation;
+package com.example.taras.gascalculation.AppUI;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -6,16 +6,38 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.example.taras.gascalculation.R;
+
+import butterknife.BindView;
 
 
-public class LauncherFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
+public class InPutFragment extends Fragment {
+
+    @BindView(R.id.editMethane_ID)
+    EditText eMethane;
+    @BindView(R.id.editMonoxideCarbon_ID)
+    EditText eMonoCarbon;
+    @BindView(R.id.editHydrogen_ID)
+    EditText eHydrogen;
+    @BindView(R.id.editDioxideCarbon_ID)
+    EditText eDioCarbon;
+    @BindView(R.id.editNitrogen_ID)
+    EditText eNitrogen;
+
+    @BindView(R.id.btn_about)
+    Button btn_about;
+    @BindView(R.id.btn_check)
+    Button btn_check;
+    @BindView(R.id.btn_getResult)
+    Button btn_getResult;
 
     private OnFragmentInteractionListener mListener;
 
-    public LauncherFragment() {
+    public InPutFragment() {
         // Required empty public constructor
     }
 
@@ -51,6 +73,5 @@ public class LauncherFragment extends Fragment {
 
 
     interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
     }
 }

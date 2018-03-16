@@ -1,4 +1,4 @@
-package com.example.taras.gascalculation;
+package com.example.taras.gascalculation.AppUI;
 
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;

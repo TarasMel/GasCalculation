@@ -1,8 +1,11 @@
-package com.example.taras.gascalculation;
+package com.example.taras.gascalculation.AppUI;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.example.taras.gascalculation.AppUI.InPutFragment;
+import com.example.taras.gascalculation.AppUI.ResultFragment;
 
 /**
  * Created by Taras on 20.02.2018.
@@ -21,7 +24,7 @@ public class PagerAdapter extends FragmentStatePagerAdapter{
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                LauncherFragment launcherFragment = new LauncherFragment();
+                InPutFragment launcherFragment = new InPutFragment();
                 return launcherFragment;
             case 1:
                 ResultFragment resultFragment = new ResultFragment();
