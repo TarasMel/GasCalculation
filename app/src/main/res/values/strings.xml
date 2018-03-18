@@ -10,7 +10,7 @@
     <string name="btn_about">About</string>
     <string name="btn_check">Check</string>
     <string name="btn_result">Result</string>
-
+    <!--String for Button About-->
     <string name="for_btn_about">Taking text from string values</string>
 
     <!--String for Result Fragment-->
@@ -24,9 +24,11 @@
     <string name="btn_add">Add</string>
     <string name="btn_back">Back</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="launcher_fragment">launcher</string>
-    <string name="result_fragment">result</string>
+    <!-- For Tabs -->
+    <string name="launcher_tab">Gas Description</string>
+    <string name="result_tab">Values Result</string>
+
+
 
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>

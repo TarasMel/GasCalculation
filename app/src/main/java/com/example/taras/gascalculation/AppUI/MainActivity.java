@@ -4,11 +4,6 @@ package com.example.taras.gascalculation.AppUI;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-
-import com.example.taras.gascalculation.AppUI.BaseActivity;
-import com.example.taras.gascalculation.AppUI.InPutFragment;
-import com.example.taras.gascalculation.AppUI.PagerAdapter;
-import com.example.taras.gascalculation.AppUI.ResultFragment;
 import com.example.taras.gascalculation.R;
 
 public class MainActivity extends BaseActivity implements
@@ -21,8 +16,8 @@ public class MainActivity extends BaseActivity implements
         setContentView(R.layout.activity_main);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout_ID);
-        tabLayout.addTab(tabLayout.newTab().setText("Gas Description"));
-        tabLayout.addTab(tabLayout.newTab().setText("Values Result"));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.launcher_tab));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.result_tab));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager)findViewById(R.id.pager_ID);

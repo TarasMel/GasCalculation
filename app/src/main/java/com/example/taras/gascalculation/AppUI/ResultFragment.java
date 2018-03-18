@@ -12,6 +12,8 @@ import android.widget.TextView;
 import com.example.taras.gascalculation.R;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class ResultFragment extends Fragment {
@@ -34,6 +36,16 @@ public class ResultFragment extends Fragment {
     @BindView(R.id.btn_add)
     Button btn_add;
 
+    @OnClick({R.id.btn_back, R.id.btn_add})
+    public void Onclick(View view){
+        switch (view.getId()){
+            case R.id.btn_back:
+                break;
+            case R.id.btn_add:
+                break;
+        }
+    }
+
     private OnFragmentInteractionListener mListener;
 
     public ResultFragment() {
@@ -50,8 +62,11 @@ public class ResultFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_result, container, false);
+        View view = inflater.inflate(R.layout.fragment_result, container, false);
+
+        ButterKnife.bind(this, view);
+
+        return view;
     }
 
 

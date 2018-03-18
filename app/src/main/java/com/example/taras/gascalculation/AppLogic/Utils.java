@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Utils {
     //TODO Check that all method works correctly, and maybe some of them we don't need to use
-    
+
 
     // gas calorific value
     private static double gasCalorificValue (GasDescription gasDescription){

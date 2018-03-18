@@ -1,21 +1,28 @@
 package com.example.taras.gascalculation.AppUI;
 
+
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.widget.Toast;
 import com.example.taras.gascalculation.R;
 
-import butterknife.BindView;
+import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class InPutFragment extends Fragment {
+
+    ArrayList<String> list;
 
     @BindView(R.id.editMethane_ID)
     EditText eMethane;
@@ -35,6 +42,19 @@ public class InPutFragment extends Fragment {
     @BindView(R.id.btn_getResult)
     Button btn_getResult;
 
+    @OnClick({R.id.btn_about,R.id.btn_check,R.id.btn_getResult})
+    public void onClick(View view){
+        switch (view.getId()){
+            case R.id.btn_about:
+                Toast.makeText(getContext(), getString(R.string.for_btn_about), Toast.LENGTH_LONG).show();
+                break;
+            case R.id.btn_check:
+                break;
+            case R.id.btn_getResult:
+                break;
+        }
+    }
+
     private OnFragmentInteractionListener mListener;
 
     public InPutFragment() {
@@ -49,8 +69,16 @@ public class InPutFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_launcher, container, false);
+        View view = inflater.inflate(R.layout.fragment_launcher, container, false);
+        ButterKnife.bind(this, view);
+        //App Are crashing
+        list = new ArrayList<>();
+        list.add(eMethane.toString());
+        list.add(eMonoCarbon.toString());
+        list.add(eHydrogen.toString());
+        list.add(eDioCarbon.toString());
+        list.add(eNitrogen.toString());
+        return view;
     }
 
 
@@ -68,9 +96,10 @@ public class InPutFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+        InputMethodManager inm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE) ;
+        inm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
         mListener = null;
     }
-
 
     interface OnFragmentInteractionListener {
     }

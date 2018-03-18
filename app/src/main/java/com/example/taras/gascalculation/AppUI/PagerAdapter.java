@@ -4,8 +4,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.taras.gascalculation.AppUI.InPutFragment;
-import com.example.taras.gascalculation.AppUI.ResultFragment;
 
 /**
  * Created by Taras on 20.02.2018.
