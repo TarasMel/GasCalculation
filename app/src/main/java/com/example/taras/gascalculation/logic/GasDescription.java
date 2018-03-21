@@ -1,10 +1,8 @@
-package com.example.taras.gascalculation.AppLogic;
+package com.example.taras.gascalculation.logic;
 
-/**
- * Created by Taras on 06.02.2018.
- */
 
-public class GasDescription {
+
+class GasDescription {
     private double gasCO;
     private double gasCH4;
     private double gasH2;
@@ -22,21 +20,19 @@ public class GasDescription {
     }
 
     private boolean gasBallast (GasDescription gasDescription){
-        if (gasDescription.getGasCO2() == 0 && gasDescription.gasN2 == 0) return true;
-        else return false;
+        return gasDescription.getGasCO2() == 0 && gasDescription.gasN2 == 0;
     }
 
-    public boolean getGasBallast (GasDescription gasDescription) {
+    boolean getGasBallast (GasDescription gasDescription) {
         return gasBallast(gasDescription);
     }
 
     private double sumBallast (GasDescription gasDescription){
-        double sumBallast = (gasDescription.getGasCO2()+gasDescription.getGasN2())/100;
-        return sumBallast;
+        return (gasDescription.getGasCO2()+gasDescription.getGasN2())/100;
     }
 
-    public double getSumBallast (GasDescription gasDescription){
-        return gasDescription.getSumBallast(gasDescription);
+    double getSumBallast (GasDescription gasDescription){
+        return gasDescription.sumBallast(gasDescription);
     }
 
 /*    private double sumOfAllComponents (GasDescription gasDescription){
@@ -50,7 +46,7 @@ public class GasDescription {
         else return true;
     }*/
 
-    public double getGasCO() {
+    double getGasCO() {
         return gasCO;
     }
 
@@ -58,7 +54,7 @@ public class GasDescription {
         this.gasCO = gasCO;
     }
 
-    public double getGasCH4() {
+    double getGasCH4() {
         return gasCH4;
     }
 
@@ -66,7 +62,7 @@ public class GasDescription {
         this.gasCH4 = gasCH4;
     }
 
-    public double getGasH2() {
+    double getGasH2() {
         return gasH2;
     }
 
@@ -74,7 +70,7 @@ public class GasDescription {
         this.gasH2 = gasH2;
     }
 
-    public double getGasCO2() {
+    double getGasCO2() {
         return gasCO2;
     }
 
@@ -82,7 +78,7 @@ public class GasDescription {
         this.gasCO2 = gasCO2;
     }
 
-    public double getGasN2() {
+    double getGasN2() {
         return gasN2;
     }
 

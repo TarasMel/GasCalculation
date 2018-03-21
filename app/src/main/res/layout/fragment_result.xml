@@ -2,65 +2,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.taras.gascalculation.AppUI.ResultFragment">
+    tools:context="com.example.taras.gascalculation.ui.ResultFragment">
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/txtLayout_calorific_ID"
         android:layout_marginTop="20dp"
-        style="@style/TextInputLayout_Style" >
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
         <TextView
             android:id="@+id/gas_calorific_ID"
-            style="@style/TextView_Style"/>
+            style="@style/AppTheme.TextView"
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="@dimen/wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/txtLayout_destiny_ID"
         android:layout_below="@+id/txtLayout_calorific_ID"
-        style="@style/TextInputLayout_Style">
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
 
         <TextView
             android:id="@+id/gas_density_ID"
-            style="@style/TextView_Style"/>
+            style="@style/AppTheme.TextView"
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="@dimen/wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/txtLayout_gas_tcoAir_ID"
         android:layout_below="@+id/txtLayout_destiny_ID"
-        style="@style/TextInputLayout_Style">
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
 
         <TextView
             android:id="@+id/gas_tcoAir_ID"
-            style="@style/TextView_Style"/>
+            style="@style/AppTheme.TextView"
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="@dimen/wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/txtLayout_gas_normalRate_ID"
         android:layout_below="@+id/txtLayout_gas_tcoAir_ID"
-        style="@style/TextInputLayout_Style">
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
 
         <TextView
             android:id="@+id/gas_normalRate_ID"
-            style="@style/TextView_Style"/>
+            style="@style/AppTheme.TextView"
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="@dimen/wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/txtLayout_gas_lowerFL_ID"
         android:layout_below="@+id/txtLayout_gas_normalRate_ID"
-        style="@style/TextInputLayout_Style">
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
 
         <TextView
             android:id="@+id/gas_lowerFL_ID"
-            style="@style/TextView_Style"/>
+            style="@style/AppTheme.TextView"
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="@dimen/wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/txtLayout_gas_higherFT_ID_ID"
         android:layout_below="@+id/txtLayout_gas_lowerFL_ID"
-        style="@style/TextInputLayout_Style">
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
 
         <TextView
             android:id="@+id/gas_higherFT_ID"
-            style="@style/TextView_Style"/>
+            style="@style/AppTheme.TextView"
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="@dimen/wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
     <RelativeLayout
@@ -76,7 +100,9 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:layout_marginStart="30dp"
-            style="@style/AppButton_Style"/>
+            style="@style/AppTheme.Button"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content" />
 
         <Button
             android:id="@+id/btn_add"
@@ -84,7 +110,9 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="30dp"
-            style="@style/AppButton_Style"/>
+            style="@style/AppTheme.Button"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content" />
     </RelativeLayout>
 
 </RelativeLayout>

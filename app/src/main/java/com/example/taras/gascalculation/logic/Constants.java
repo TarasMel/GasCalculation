@@ -1,4 +1,4 @@
-package com.example.taras.gascalculation.AppLogic;
+package com.example.taras.gascalculation.logic;
 
 
 

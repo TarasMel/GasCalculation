@@ -7,38 +7,31 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+<!--        <item name="android:textViewStyle">@style/AppTheme.TextView</item>
+        <item name="android:editTextStyle">@style/AppTheme.EditText</item>
+        <item name="android:actionButtonStyle">@style/AppTheme.Button</item>
+        <item name="android.support.design.widget.TextInputLayout">@style/TextInputLayout.Style</item>-->
     </style>
 
-    <!-- Base TextInputLayout style-->
-    <style name="TextInputLayout_Style" parent="Widget.Design.TextInputLayout">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">60dp</item>
-        <!--<item name="layout_alignParentStart">true</item>-->
-    </style>
 
-    <!-- Base button style -->
-    <style name="AppButton_Style" parent="Base.Widget.AppCompat.Button">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">50dp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:backgroundTint">@color/button_Color</item>
-        <item name="android:textSize">15sp</item>
+    <!-- Base TextView style -->
+    <style name="AppTheme.TextView" parent="Base.TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">@dimen/textSize_textView</item>
+       <!-- <item name="android:textColor">@color/text_Color</item>-->
     </style>
 
     <!-- Base EditText style -->
-    <style name="EditText_Style" parent="Base.Widget.AppCompat.EditText">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">50dp</item>
-       <!-- <item name="android:layout_alignParentStart">true</item>-->
-        <!--<item name="textColor">@color/text_color</item>-->
+    <style name="AppTheme.EditText" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/textSize_editText</item>
         <item name="android:inputType">numberDecimal</item>
+        <!-- <item name="textColor">@color/text_color</item>-->
     </style>
 
-    <!-- Base TextView style -->
-    <style name="TextView_Style" parent="Widget.AppCompat.AutoCompleteTextView">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">50dp</item>
-        <item name="android:textColor">@color/text_Color</item>
+    <!-- Base button style -->
+    <style name="AppTheme.Button" parent="Base.TextAppearance.AppCompat.Widget.Button">
+        <item name="android:gravity">center</item>
+        <item name="android:backgroundTint">@color/button_Color</item>
+        <item name="android:textSize">@dimen/textSize_button</item>
     </style>
 
 </resources>

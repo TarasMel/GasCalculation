@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="match_parent" format="integer" type="dimen">-1</item>
+    <item name="wrap_content" format="integer" type="dimen">-2</item>
+    <!--for TextInputLayout -->
+    <dimen name="textIL_height">60dp</dimen>
+    <dimen name="textIL_width">@dimen/match_parent</dimen>
+
+    <!--for TextView-->
+    <dimen name="textSize_textView">40sp</dimen>
+    <dimen name="textView_height">50dp</dimen>
+    <dimen name="textView_width">@dimen/match_parent</dimen>
+
+    <!--for EditText-->
+    <dimen name="textSize_editText">15sp</dimen>
+    <dimen name="editText_height">50dp</dimen>
+    <dimen name="editText_width">@dimen/match_parent</dimen>
+
+    <!--for Button-->
+    <dimen name="textSize_button">15sp</dimen>
+    <dimen name="button_height">50dp</dimen>
+    <dimen name="button_width">@dimen/wrap_content</dimen>
+
+</resources>

@@ -1,4 +1,4 @@
-package com.example.taras.gascalculation.AppLogic;
+package com.example.taras.gascalculation.logic;
 
 
 import java.util.ArrayList;
@@ -37,6 +37,7 @@ public class Utils {
     // theoretical consumption of air when the excess air ratio equal to one
     private static double gasTheoreticalAirConsumption (GasDescription gasDescription){
         double gasTheoreticalAirConsumption;
+        
         gasTheoreticalAirConsumption = (1/21)*(Constants.CO_AND_H2_GAS_THEORETICAL_AIR_CONSUMPTION*
                 (gasDescription.getGasCO()+
                 gasDescription.getGasH2())+Constants.CH4_GAS_THEORETICAL_AIR_CONSUMPTION*

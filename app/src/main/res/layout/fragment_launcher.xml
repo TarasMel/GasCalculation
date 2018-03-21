@@ -2,63 +2,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.taras.gascalculation.AppUI.InPutFragment">
+    tools:context="com.example.taras.gascalculation.ui.InPutFragment">
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/inputMethane_ID"
-        style="@style/TextInputLayout_Style">
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
 
         <EditText
             android:id="@+id/editMethane_ID"
             android:hint="@string/gas_methane"
-            style="@style/EditText_Style"
-            tools:ignore="LabelFor" />
+            tools:ignore="LabelFor"
+            style="@style/AppTheme.EditText"
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="@dimen/wrap_content"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/inputMonoCarbon_ID"
         android:layout_below="@+id/inputMethane_ID"
-        style="@style/TextInputLayout_Style">
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
 
         <EditText
             android:id="@+id/editMonoxideCarbon_ID"
             android:hint="@string/gas_carbon_monoxide"
-            style="@style/EditText_Style" />
+            style="@style/AppTheme.EditText"
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="@dimen/wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/inputHydrogen_ID"
         android:layout_below="@+id/inputMonoCarbon_ID"
-        style="@style/TextInputLayout_Style"
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
         >
 
         <EditText
             android:id="@+id/editHydrogen_ID"
             android:hint="@string/gas_hydrogen"
-            style="@style/EditText_Style"/>
+            style="@style/AppTheme.EditText"
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="@dimen/wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/inputDioCarbon_ID"
         android:layout_below="@+id/inputHydrogen_ID"
-        style="@style/TextInputLayout_Style"
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
         >
 
         <EditText
             android:id="@+id/editDioxideCarbon_ID"
             android:hint="@string/gas_carbon_dioxide"
-            style="@style/EditText_Style"/>
+            style="@style/AppTheme.EditText"
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="@dimen/wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/inputNitrogen_ID"
         android:layout_below="@+id/inputDioCarbon_ID"
-        style="@style/TextInputLayout_Style">
-
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
         <EditText
             android:id="@+id/editNitrogen_ID"
             android:hint="@string/gas_nitrogen"
-            style="@style/EditText_Style"/>
+            style="@style/AppTheme.EditText"
+            android:layout_width="@dimen/match_parent"
+            android:layout_height="@dimen/wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
     <RelativeLayout
@@ -76,14 +93,18 @@
             android:layout_alignParentTop="true"
             android:layout_marginEnd="36dp"
             tools:ignore="RelativeOverlap"
-            style="@style/AppButton_Style" />
+            style="@style/AppTheme.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/btn_check"
             android:text="@string/btn_check"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            style="@style/AppButton_Style" />
+            style="@style/AppTheme.Button"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content" />
 
         <Button
             android:id="@+id/btn_about"
@@ -91,7 +112,9 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:layout_marginStart="36dp"
-            style="@style/AppButton_Style" />
+            style="@style/AppTheme.Button"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content" />
     </RelativeLayout>
 
 </RelativeLayout>

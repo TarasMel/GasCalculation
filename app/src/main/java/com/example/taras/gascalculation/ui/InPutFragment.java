@@ -1,4 +1,4 @@
-package com.example.taras.gascalculation.AppUI;
+package com.example.taras.gascalculation.ui;
 
 
 import android.content.Context;
@@ -22,7 +22,11 @@ import butterknife.OnClick;
 
 public class InPutFragment extends Fragment {
 
-    ArrayList<String> list;
+    private OnFragmentInteractionListener mListener;
+
+    public InPutFragment() {
+        // Required empty public constructor
+    }
 
     @BindView(R.id.editMethane_ID)
     EditText eMethane;
@@ -55,12 +59,6 @@ public class InPutFragment extends Fragment {
         }
     }
 
-    private OnFragmentInteractionListener mListener;
-
-    public InPutFragment() {
-        // Required empty public constructor
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,7 +70,7 @@ public class InPutFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_launcher, container, false);
         ButterKnife.bind(this, view);
         //App Are crashing
-        list = new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add(eMethane.toString());
         list.add(eMonoCarbon.toString());
         list.add(eHydrogen.toString());

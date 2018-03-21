@@ -1,4 +1,4 @@
-package com.example.taras.gascalculation.AppUI;
+package com.example.taras.gascalculation.ui;
 
 
 import android.os.Bundle;
