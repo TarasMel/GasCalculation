@@ -15,8 +15,8 @@
             android:hint="@string/gas_methane"
             tools:ignore="LabelFor"
             style="@style/AppTheme.EditText"
-            android:layout_width="@dimen/match_parent"
-            android:layout_height="@dimen/wrap_content"/>
+            android:layout_width="@dimen/editText_width"
+            android:layout_height="@dimen/editText_height"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -30,8 +30,8 @@
             android:id="@+id/editMonoxideCarbon_ID"
             android:hint="@string/gas_carbon_monoxide"
             style="@style/AppTheme.EditText"
-            android:layout_width="@dimen/match_parent"
-            android:layout_height="@dimen/wrap_content" />
+            android:layout_width="@dimen/editText_width"
+            android:layout_height="@dimen/editText_height" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -45,8 +45,8 @@
             android:id="@+id/editHydrogen_ID"
             android:hint="@string/gas_hydrogen"
             style="@style/AppTheme.EditText"
-            android:layout_width="@dimen/match_parent"
-            android:layout_height="@dimen/wrap_content" />
+            android:layout_width="@dimen/editText_width"
+            android:layout_height="@dimen/editText_height" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -60,8 +60,8 @@
             android:id="@+id/editDioxideCarbon_ID"
             android:hint="@string/gas_carbon_dioxide"
             style="@style/AppTheme.EditText"
-            android:layout_width="@dimen/match_parent"
-            android:layout_height="@dimen/wrap_content" />
+            android:layout_width="@dimen/editText_width"
+            android:layout_height="@dimen/editText_height" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -74,8 +74,8 @@
             android:id="@+id/editNitrogen_ID"
             android:hint="@string/gas_nitrogen"
             style="@style/AppTheme.EditText"
-            android:layout_width="@dimen/match_parent"
-            android:layout_height="@dimen/wrap_content" />
+            android:layout_width="@dimen/editText_width"
+            android:layout_height="@dimen/editText_height" />
     </android.support.design.widget.TextInputLayout>
 
     <RelativeLayout
@@ -94,8 +94,8 @@
             android:layout_marginEnd="36dp"
             tools:ignore="RelativeOverlap"
             style="@style/AppTheme.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
 
         <Button
             android:id="@+id/btn_check"
@@ -103,8 +103,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             style="@style/AppTheme.Button"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/wrap_content" />
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
 
         <Button
             android:id="@+id/btn_about"
@@ -113,8 +113,8 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="36dp"
             style="@style/AppTheme.Button"
-            android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/wrap_content" />
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
     </RelativeLayout>
 
 </RelativeLayout>

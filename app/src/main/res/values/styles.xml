@@ -7,24 +7,18 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-<!--        <item name="android:textViewStyle">@style/AppTheme.TextView</item>
-        <item name="android:editTextStyle">@style/AppTheme.EditText</item>
-        <item name="android:actionButtonStyle">@style/AppTheme.Button</item>
-        <item name="android.support.design.widget.TextInputLayout">@style/TextInputLayout.Style</item>-->
     </style>
 
 
     <!-- Base TextView style -->
     <style name="AppTheme.TextView" parent="Base.TextAppearance.AppCompat.Medium">
         <item name="android:textSize">@dimen/textSize_textView</item>
-       <!-- <item name="android:textColor">@color/text_Color</item>-->
     </style>
 
     <!-- Base EditText style -->
     <style name="AppTheme.EditText" parent="Base.Widget.AppCompat.EditText">
         <item name="android:textSize">@dimen/textSize_editText</item>
         <item name="android:inputType">numberDecimal</item>
-        <!-- <item name="textColor">@color/text_color</item>-->
     </style>
 
     <!-- Base button style -->

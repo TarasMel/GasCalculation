@@ -13,8 +13,8 @@
         <TextView
             android:id="@+id/gas_calorific_ID"
             style="@style/AppTheme.TextView"
-            android:layout_width="@dimen/match_parent"
-            android:layout_height="@dimen/wrap_content" />
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="@dimen/textView_height" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -27,8 +27,8 @@
         <TextView
             android:id="@+id/gas_density_ID"
             style="@style/AppTheme.TextView"
-            android:layout_width="@dimen/match_parent"
-            android:layout_height="@dimen/wrap_content" />
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="@dimen/textView_height" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -41,8 +41,8 @@
         <TextView
             android:id="@+id/gas_tcoAir_ID"
             style="@style/AppTheme.TextView"
-            android:layout_width="@dimen/match_parent"
-            android:layout_height="@dimen/wrap_content" />
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="@dimen/textView_height" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -55,8 +55,8 @@
         <TextView
             android:id="@+id/gas_normalRate_ID"
             style="@style/AppTheme.TextView"
-            android:layout_width="@dimen/match_parent"
-            android:layout_height="@dimen/wrap_content" />
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="@dimen/textView_height" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -69,8 +69,8 @@
         <TextView
             android:id="@+id/gas_lowerFL_ID"
             style="@style/AppTheme.TextView"
-            android:layout_width="@dimen/match_parent"
-            android:layout_height="@dimen/wrap_content" />
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="@dimen/textView_height" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -83,8 +83,8 @@
         <TextView
             android:id="@+id/gas_higherFT_ID"
             style="@style/AppTheme.TextView"
-            android:layout_width="@dimen/match_parent"
-            android:layout_height="@dimen/wrap_content" />
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="@dimen/textView_height" />
     </android.support.design.widget.TextInputLayout>
 
     <RelativeLayout
