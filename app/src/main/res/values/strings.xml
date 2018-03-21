@@ -1,17 +1,19 @@
 <resources>
+
+    <!--String for InPut Fragment-->
     <string name="app_name">GasCalculation</string>
-    <string name="gas_methane">Methane</string>
-    <string name="gas_hydrogen">Hydrogen</string>
-    <string name="gas_carbon_monoxide">Carbon Monoxide</string>
-    <string name="gas_carbon_dioxide">Carbon Dioxide</string>
-    <string name="gas_nitrogen">Nitrogen</string>
+    <string name="gas_methane">Methane content</string>
+    <string name="gas_hydrogen">Hydrogen content</string>
+    <string name="gas_carbon_monoxide">Carbon monoxide content</string>
+    <string name="gas_carbon_dioxide">Carbon dioxide content</string>
+    <string name="gas_nitrogen">Nitrogen content</string>
     <string name="btn_about">About</string>
     <string name="btn_check">Check</string>
     <string name="btn_result">Result</string>
-
+    <!--String for Button About-->
     <string name="for_btn_about">Taking text from string values</string>
 
-    <!--String for Result Activity-->
+    <!--String for Result Fragment-->
 
     <string name="gas_calorific">Gas Calorific</string>
     <string name="gas_density">Gas Density</string>
@@ -22,7 +24,12 @@
     <string name="btn_add">Add</string>
     <string name="btn_back">Back</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="launcher_fragment">launcher</string>
-    <string name="result_fragment">result</string>
+    <!-- For Tabs -->
+    <string name="launcher_tab">Gas Description</string>
+    <string name="result_tab">Values Result</string>
+
+
+
+    <item name="visible" type="id"/>
+    <item name="masked" type="id"/>
 </resources>

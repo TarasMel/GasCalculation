@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!-- Base application theme. -->
@@ -6,6 +7,25 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!-- Base TextView style -->
+    <style name="AppTheme.TextView" parent="Base.TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">@dimen/textSize_textView</item>
+    </style>
+
+    <!-- Base EditText style -->
+    <style name="AppTheme.EditText" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/textSize_editText</item>
+        <item name="android:inputType">numberDecimal</item>
+    </style>
+
+    <!-- Base button style -->
+    <style name="AppTheme.Button" parent="Base.TextAppearance.AppCompat.Widget.Button">
+        <item name="android:gravity">center</item>
+        <item name="android:backgroundTint">@color/button_Color</item>
+        <item name="android:textSize">@dimen/textSize_button</item>
     </style>
 
 </resources>

@@ -2,177 +2,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.taras.gascalculation.LauncherFragment">
+    tools:context="com.example.taras.gascalculation.ui.InPutFragment">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="39dp"
-        android:id="@+id/relativeLayout">
-
-        <TextView
-            android:id="@+id/methane_ID"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:textSize="20sp"
-            android:text="@string/gas_methane"
-            android:layout_centerVertical="true"
-            android:layout_alignParentStart="true" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputMethane_ID"
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
 
         <EditText
             android:id="@+id/editMethane_ID"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:inputType="numberDecimal"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/methane_ID" />
-    </RelativeLayout>
+            android:hint="@string/gas_methane"
+            tools:ignore="LabelFor"
+            style="@style/AppTheme.EditText"
+            android:layout_width="@dimen/editText_width"
+            android:layout_height="@dimen/editText_height"/>
+    </android.support.design.widget.TextInputLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/relativeLayout2"
-        android:layout_below="@+id/relativeLayout"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp">
-
-        <TextView
-            android:id="@+id/monoxideCarbon_ID"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:text="@string/gas_carbon_monoxide"
-            android:textSize="20sp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentStart="true" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputMonoCarbon_ID"
+        android:layout_below="@+id/inputMethane_ID"
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
 
         <EditText
-            android:id="@+id/editMonoxide_ID"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:inputType="numberDecimal"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/monoxideCarbon_ID" />
-    </RelativeLayout>
+            android:id="@+id/editMonoxideCarbon_ID"
+            android:hint="@string/gas_carbon_monoxide"
+            style="@style/AppTheme.EditText"
+            android:layout_width="@dimen/editText_width"
+            android:layout_height="@dimen/editText_height" />
+    </android.support.design.widget.TextInputLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/relativeLayout3"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/relativeLayout2"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:id="@+id/hydrogen_ID"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:textSize="20sp"
-            android:text="@string/gas_hydrogen"
-            android:layout_centerVertical="true"
-            android:layout_alignParentStart="true" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputHydrogen_ID"
+        android:layout_below="@+id/inputMonoCarbon_ID"
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
 
         <EditText
             android:id="@+id/editHydrogen_ID"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:inputType="numberDecimal"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/hydrogen_ID" />
-    </RelativeLayout>
+            android:hint="@string/gas_hydrogen"
+            style="@style/AppTheme.EditText"
+            android:layout_width="@dimen/editText_width"
+            android:layout_height="@dimen/editText_height" />
+    </android.support.design.widget.TextInputLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/relativeLayout4"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/relativeLayout3"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:id="@+id/dioxideCarbon_ID"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:textSize="20sp"
-            android:text="@string/gas_carbon_dioxide"
-            android:layout_alignBaseline="@+id/editDioxide_ID"
-            android:layout_alignBottom="@+id/editDioxide_ID"
-            android:layout_alignParentStart="true" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputDioCarbon_ID"
+        android:layout_below="@+id/inputHydrogen_ID"
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
 
         <EditText
-            android:id="@+id/editDioxide_ID"
-            android:layout_width="180dp"
-            android:layout_height="50dp"
-            android:inputType="numberDecimal"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/dioxideCarbon_ID" />
-    </RelativeLayout>
+            android:id="@+id/editDioxideCarbon_ID"
+            android:hint="@string/gas_carbon_dioxide"
+            style="@style/AppTheme.EditText"
+            android:layout_width="@dimen/editText_width"
+            android:layout_height="@dimen/editText_height" />
+    </android.support.design.widget.TextInputLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/relativeLayout5"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/relativeLayout4"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:id="@+id/nitrogen_ID"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:text="@string/gas_nitrogen"
-            android:textSize="20sp"
-            android:layout_alignBaseline="@+id/editNitrogen_ID"
-            android:layout_alignBottom="@+id/editNitrogen_ID"
-            android:layout_alignParentStart="true" />
-
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputNitrogen_ID"
+        android:layout_below="@+id/inputDioCarbon_ID"
+        android:layout_height="@dimen/textIL_height"
+        android:layout_width="@dimen/textIL_width"
+        >
         <EditText
             android:id="@+id/editNitrogen_ID"
-            android:layout_width="180dp"
-            android:layout_height="50dp"
-            android:inputType="numberDecimal"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/nitrogen_ID" />
-    </RelativeLayout>
-
+            android:hint="@string/gas_nitrogen"
+            style="@style/AppTheme.EditText"
+            android:layout_width="@dimen/editText_width"
+            android:layout_height="@dimen/editText_height" />
+    </android.support.design.widget.TextInputLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/relativeLayout6"
+        android:id="@+id/relativeLayout_Buttons"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/relativeLayout5"
+        android:layout_below="@+id/inputNitrogen_ID"
         android:layout_alignParentStart="true">
+
         <Button
             android:id="@+id/btn_getResult"
             android:text="@string/btn_result"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="36dp" />
-
-        <Button
-            android:id="@+id/btn_Check"
-            android:text="@string/btn_check"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_marginEnd="36dp"
+            tools:ignore="RelativeOverlap"
+            style="@style/AppTheme.Button"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
 
         <Button
-            android:id="@+id/btn_About"
+            android:id="@+id/btn_check"
+            android:text="@string/btn_check"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            style="@style/AppTheme.Button"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
+
+        <Button
+            android:id="@+id/btn_about"
             android:text="@string/btn_about"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="36dp" />
+            android:layout_marginStart="36dp"
+            style="@style/AppTheme.Button"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
     </RelativeLayout>
+
 </RelativeLayout>
