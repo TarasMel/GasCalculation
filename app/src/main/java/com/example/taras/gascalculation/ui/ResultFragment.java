@@ -18,6 +18,13 @@ import butterknife.OnClick;
 
 public class ResultFragment extends Fragment {
 
+    private OnFragmentInteractionListener mListener;
+
+    public ResultFragment() {
+        // Required empty public constructor
+    }
+
+
     @BindView(R.id.gas_calorific_ID)
     TextView gas_calorific;
     @BindView(R.id.gas_density_ID)
@@ -45,18 +52,10 @@ public class ResultFragment extends Fragment {
                 break;
         }
     }
-
-    private OnFragmentInteractionListener mListener;
-
-    public ResultFragment() {
-        // Required empty public constructor
-    }
-
-
+    //TODO Где лучше обработать данные которые я получаю из InPutFragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override

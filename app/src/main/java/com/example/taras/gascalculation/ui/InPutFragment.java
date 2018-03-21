@@ -12,8 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.example.taras.gascalculation.R;
+import com.example.taras.gascalculation.logic.Utils;
+import com.example.taras.gascalculation.logic.GasDescription;
 
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,6 +24,7 @@ import butterknife.OnClick;
 public class InPutFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
+    private GasDescription gasDescription = new GasDescription();//обьявил глобально чтобы не крашилось при нажатии на Чек
 
     public InPutFragment() {
         // Required empty public constructor
@@ -46,6 +48,7 @@ public class InPutFragment extends Fragment {
     @BindView(R.id.btn_getResult)
     Button btn_getResult;
 
+
     @OnClick({R.id.btn_about,R.id.btn_check,R.id.btn_getResult})
     public void onClick(View view){
         switch (view.getId()){
@@ -53,8 +56,15 @@ public class InPutFragment extends Fragment {
                 Toast.makeText(getContext(), getString(R.string.for_btn_about), Toast.LENGTH_LONG).show();
                 break;
             case R.id.btn_check:
+                if (Utils.checkingAdding(gasDescription)){
+                    Toast.makeText(getContext(), "if", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Toast.makeText(getContext(), "else", Toast.LENGTH_LONG).show();
+                }
                 break;
             case R.id.btn_getResult:
+                //TODO Принажатии передает данные в ResultFragment
                 break;
         }
     }
@@ -70,12 +80,10 @@ public class InPutFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_launcher, container, false);
         ButterKnife.bind(this, view);
         //App Are crashing
-        ArrayList<String> list = new ArrayList<>();
-        list.add(eMethane.toString());
-        list.add(eMonoCarbon.toString());
-        list.add(eHydrogen.toString());
-        list.add(eDioCarbon.toString());
-        list.add(eNitrogen.toString());
+        // TODO Где лучше сделать иницилизацию объекта, чтобы можно было использовать его можно было использовать button btn_check
+        /*gasDescription = new GasDescription(Double.parseDouble(eMethane.toString()),Double.parseDouble(eMonoCarbon.toString()),
+                Double.parseDouble(eHydrogen.toString()),Double.parseDouble(eDioCarbon.toString()),Double.parseDouble(eNitrogen.toString()));*/
+
         return view;
     }
 

@@ -2,7 +2,7 @@ package com.example.taras.gascalculation.logic;
 
 
 
-class GasDescription {
+public class GasDescription {
     private double gasCO;
     private double gasCH4;
     private double gasH2;
@@ -35,18 +35,7 @@ class GasDescription {
         return gasDescription.sumBallast(gasDescription);
     }
 
-/*    private double sumOfAllComponents (GasDescription gasDescription){
-        double sum;
-        return sum = gasDescription.getGasCH4()+gasDescription.getGasCO()+gasDescription.getGasH2()+
-                gasDescription.getGasCO2()+gasDescription.getGasN2();
-    }
-
-    public boolean checkingAdding (GasDescription gasDescription){
-        if (sumOfAllComponents(gasDescription) != 100.0) return false;
-        else return true;
-    }*/
-
-    double getGasCO() {
+    public double getGasCO() {
         return gasCO;
     }
 
@@ -54,7 +43,7 @@ class GasDescription {
         this.gasCO = gasCO;
     }
 
-    double getGasCH4() {
+    public double getGasCH4() {
         return gasCH4;
     }
 
@@ -62,7 +51,7 @@ class GasDescription {
         this.gasCH4 = gasCH4;
     }
 
-    double getGasH2() {
+    public double getGasH2() {
         return gasH2;
     }
 
@@ -70,7 +59,7 @@ class GasDescription {
         this.gasH2 = gasH2;
     }
 
-    double getGasCO2() {
+    public double getGasCO2() {
         return gasCO2;
     }
 
@@ -78,11 +67,42 @@ class GasDescription {
         this.gasCO2 = gasCO2;
     }
 
-    double getGasN2() {
+    public double getGasN2() {
         return gasN2;
     }
 
     public void setGasN2(double gasN2) {
         this.gasN2 = gasN2;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        GasDescription that = (GasDescription) o;
+
+        if (Double.compare(that.gasCO, gasCO) != 0) return false;
+        if (Double.compare(that.gasCH4, gasCH4) != 0) return false;
+        if (Double.compare(that.gasH2, gasH2) != 0) return false;
+        if (Double.compare(that.gasCO2, gasCO2) != 0) return false;
+        return Double.compare(that.gasN2, gasN2) == 0;
+
+    }
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(gasCO);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(gasCH4);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(gasH2);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(gasCO2);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(gasN2);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
     }
 }
