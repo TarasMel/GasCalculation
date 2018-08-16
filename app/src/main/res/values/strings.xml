@@ -13,6 +13,12 @@
     <!--String for Button About-->
     <string name="for_btn_about">Taking text from string values</string>
 
+    <!--String for Button Check-->
+    <string name="for_btn_check_correct">Data entered correctly, you can continue to work with the
+        application</string>
+    <string name="for_btn_about_incorrect">Data entered incorrectly, try again or verify the
+        correctness of your data</string>
+
     <!--String for Result Fragment-->
 
     <string name="gas_calorific">Gas Calorific</string>

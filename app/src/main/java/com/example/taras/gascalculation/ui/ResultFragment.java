@@ -8,8 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.example.taras.gascalculation.R;
+import com.example.taras.gascalculation.logic.GasDescription;
+import com.example.taras.gascalculation.logic.Utils;
+
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -17,6 +20,7 @@ import butterknife.OnClick;
 
 
 public class ResultFragment extends Fragment {
+    private final static String CONSTANT_FOR_CET_TRANSACTION = "const";
 
     private OnFragmentInteractionListener mListener;
 
@@ -62,9 +66,25 @@ public class ResultFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_result, container, false);
-
         ButterKnife.bind(this, view);
-
+        GasDescription gasDescription = new GasDescription();
+        Bundle bundle = this.getArguments();
+        if(bundle != null){
+            gasDescription.setGasCH4(Double.parseDouble
+                    (bundle.getString(ConstantForTransaction.CONST_METHANE)));
+            gasDescription.setGasCO(Double.parseDouble
+                    (bundle.getString(ConstantForTransaction.CONST_MONOXIDE)));
+            gasDescription.setGasH2(Double.parseDouble
+                    (bundle.getString(ConstantForTransaction.CONST_HYDROGEN)));
+            gasDescription.setGasCO2(Double.parseDouble
+                    (bundle.getString(ConstantForTransaction.CONST_DIOXIDE)));
+            gasDescription.setGasN2(Double.parseDouble
+                    (bundle.getString(ConstantForTransaction.CONST_NITROGEN)));
+            gas_calorific.setText(bundle.getString(ConstantForTransaction.CONST_METHANE)+" "+bundle.getString(ConstantForTransaction.CONST_MONOXIDE)+" "+
+                    bundle.getString(ConstantForTransaction.CONST_HYDROGEN)+" "+bundle.getString(ConstantForTransaction.CONST_DIOXIDE)+" "+
+                    bundle.getString(ConstantForTransaction.CONST_NITROGEN));
+        }
+        gas_calorific.setText("trololo");
         return view;
     }
 

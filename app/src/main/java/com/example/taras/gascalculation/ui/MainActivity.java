@@ -6,9 +6,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import com.example.taras.gascalculation.R;
 
-public class MainActivity extends BaseActivity implements
-        InPutFragment.OnFragmentInteractionListener,
-        ResultFragment.OnFragmentInteractionListener{
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +21,7 @@ public class MainActivity extends BaseActivity implements
         final ViewPager viewPager = (ViewPager)findViewById(R.id.pager_ID);
         final PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(),
                 tabLayout.getTabCount());
+
         viewPager.setAdapter(adapter);
         viewPager.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

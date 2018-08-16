@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragment_launcher_ID"
     tools:context="com.example.taras.gascalculation.ui.InPutFragment">
 
     <android.support.design.widget.TextInputLayout
@@ -115,6 +116,6 @@
             style="@style/AppTheme.Button"
             android:layout_width="@dimen/button_width"
             android:layout_height="@dimen/button_height" />
-    </RelativeLayout>
 
+    </RelativeLayout>
 </RelativeLayout>

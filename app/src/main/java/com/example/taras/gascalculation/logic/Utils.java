@@ -119,5 +119,12 @@ public class Utils {
     public static boolean checkingAdding (GasDescription gasDescription){
         return  sumOfAllComponents(gasDescription) == 100.0;
     }
+    class A{}
+    class B extends A{}
 
+    public void sd(){
+        A a = new A();
+        B b =new B();
+
+    }
 }

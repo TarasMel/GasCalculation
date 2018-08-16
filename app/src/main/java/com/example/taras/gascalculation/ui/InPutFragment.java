@@ -15,7 +15,6 @@ import com.example.taras.gascalculation.R;
 import com.example.taras.gascalculation.logic.Utils;
 import com.example.taras.gascalculation.logic.GasDescription;
 
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -23,8 +22,8 @@ import butterknife.OnClick;
 
 public class InPutFragment extends Fragment {
 
+
     private OnFragmentInteractionListener mListener;
-    private GasDescription gasDescription = new GasDescription();//обьявил глобально чтобы не крашилось при нажатии на Чек
 
     public InPutFragment() {
         // Required empty public constructor
@@ -56,15 +55,41 @@ public class InPutFragment extends Fragment {
                 Toast.makeText(getContext(), getString(R.string.for_btn_about), Toast.LENGTH_LONG).show();
                 break;
             case R.id.btn_check:
+                checkEditText(eMethane);
+                checkEditText(eMonoCarbon);
+                checkEditText(eHydrogen);
+                checkEditText(eDioCarbon);
+                checkEditText(eNitrogen);
+                GasDescription gasDescription = new GasDescription(
+                        Double.parseDouble(eMethane.getText().toString()),
+                        Double.parseDouble(eMonoCarbon.getText().toString()),
+                        Double.parseDouble(eHydrogen.getText().toString()),
+                        Double.parseDouble(eDioCarbon.getText().toString()),
+                        Double.parseDouble(eNitrogen.getText().toString()));
                 if (Utils.checkingAdding(gasDescription)){
-                    Toast.makeText(getContext(), "if", Toast.LENGTH_LONG).show();
+                    makeToast(getResources().getString(R.string.for_btn_check_correct));
+                    btn_getResult.setEnabled(true);
                 }
                 else {
-                    Toast.makeText(getContext(), "else", Toast.LENGTH_LONG).show();
+                    makeToast(getResources().getString(R.string.for_btn_about_incorrect));
                 }
                 break;
             case R.id.btn_getResult:
-                //TODO Принажатии передает данные в ResultFragment
+                InPutFragment inPutFragment = new InPutFragment();
+                Bundle bundle = new Bundle();
+                /*GasDescription gasDescription_correct = new GasDescription(
+                        Double.parseDouble(eMethane.getText().toString()),
+                        Double.parseDouble(eMonoCarbon.getText().toString()),
+                        Double.parseDouble(eHydrogen.getText().toString()),
+                        Double.parseDouble(eDioCarbon.getText().toString()),
+                        Double.parseDouble(eNitrogen.getText().toString()));*/
+                bundle.putString(eMethane.getText().toString(),ConstantForTransaction.CONST_METHANE);
+                bundle.putString(eMethane.getText().toString(),ConstantForTransaction.CONST_MONOXIDE);
+                bundle.putString(eMethane.getText().toString(),ConstantForTransaction.CONST_HYDROGEN);
+                bundle.putString(eMethane.getText().toString(),ConstantForTransaction.CONST_DIOXIDE);
+                bundle.putString(eMethane.getText().toString(),ConstantForTransaction.CONST_NITROGEN);
+                inPutFragment.setArguments(bundle);
+                //TODO Передать бандл в ResultFragment
                 break;
         }
     }
@@ -79,10 +104,10 @@ public class InPutFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_launcher, container, false);
         ButterKnife.bind(this, view);
-        //App Are crashing
+        btn_getResult.setEnabled(false);
+
+
         // TODO Где лучше сделать иницилизацию объекта, чтобы можно было использовать его можно было использовать button btn_check
-        /*gasDescription = new GasDescription(Double.parseDouble(eMethane.toString()),Double.parseDouble(eMonoCarbon.toString()),
-                Double.parseDouble(eHydrogen.toString()),Double.parseDouble(eDioCarbon.toString()),Double.parseDouble(eNitrogen.toString()));*/
 
         return view;
     }
@@ -106,6 +131,18 @@ public class InPutFragment extends Fragment {
         inm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
         mListener = null;
     }
+
+    public void makeToast (String str){
+        Toast.makeText(getContext(), str,Toast.LENGTH_SHORT).show();
+    }
+
+    public String checkEditText(EditText editText){
+        if (editText.length() == 0){
+            editText.setText("0");
+        }
+        return editText.getText().toString();
+    }
+
 
     interface OnFragmentInteractionListener {
     }

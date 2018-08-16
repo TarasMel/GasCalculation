@@ -1,8 +1,10 @@
 package com.example.taras.gascalculation.logic;
 
 
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class GasDescription {
+public class GasDescription{
     private double gasCO;
     private double gasCH4;
     private double gasH2;
@@ -105,4 +107,5 @@ public class GasDescription {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
+
 }
